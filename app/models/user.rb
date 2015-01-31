@@ -6,6 +6,9 @@ class User < ActiveRecord::Base
 
   before_save :ensure_authentication_token
  
+  has_many :memberships
+  has_many :projects, :through => :memberships
+
   def name
   	return email if first_name.blank?
   	"#{first_name} #{last_name}"
