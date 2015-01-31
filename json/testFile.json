@@ -1,1 +1,141 @@
-{"Floor": {"floor_type": "Concrete 200 mm", "level_name": "Level 1", "revit_id": "d2390d2c-7f71-414d-b143-e7f7d8048330-00072fa7", "thickness": 0.20000000000000001, "material": null}, "Room": {"number": "A4004", "occupancy": "1", "name": "Storage", "floor_finish": "None", "wall_finish": "None", "height": 4.0, "level_name": "Ground", "ceiling_finish": "None", "base_finish": "None", "revit_id": "2647b42e-611f-407a-a957-585c0eb63599-00072a1f", "area": 9.897}, "Wall": {"2647b42e-611f-407a-a957-585c0eb63599-00072238": "revit_id", "ACU-101": "material", "2647b42e-611f-407a-a957-585c0eb63599-000722be": "revit_id", "CONCEPT 300mm RED": "wall_type", "Ground": "level_name", "0.65610000000000002": "thickness", "2647b42e-611f-407a-a957-585c0eb63599-00072266": "revit_id", "0.98419999999999996": "thickness", "2647b42e-611f-407a-a957-585c0eb63599-00072a14": "revit_id", "2647b42e-611f-407a-a957-585c0eb63599-00072309": "revit_id", "CONCEPT 200mm": "wall_type", "2647b42e-611f-407a-a957-585c0eb63599-00072339": "revit_id", "2647b42e-611f-407a-a957-585c0eb63599-0007229d": "revit_id", "null": "material"}, "Column": {"level_name": "Ground", "section": "305x305x97UC", "material": null, "revit_id": "fedcf906-a98c-4c8e-acef-18540a1ee941-00072e55"}}
+{
+    "Wall-2647b42e-611f-407a-a957-585c0eb63599-0007229d": {
+        "wall_type": "CONCEPT 300mm RED",
+        "level_name": "Ground",
+        "revit_id": "2647b42e-611f-407a-a957-585c0eb63599-0007229d",
+        "thickness": 0.9842,
+        "material": "ACU-101"
+    },
+    "Wall-2647b42e-611f-407a-a957-585c0eb63599-00072309": {
+        "wall_type": "CONCEPT 200mm",
+        "level_name": "Ground",
+        "revit_id": "2647b42e-611f-407a-a957-585c0eb63599-00072309",
+        "thickness": 0.6561,
+        "material": null
+    },
+    "Column-fedcf906-a98c-4c8e-acef-18540a1ee941-00072db3": {
+        "level_name": "Ground",
+        "section": "305x305x97UC",
+        "material": null,
+        "revit_id": "fedcf906-a98c-4c8e-acef-18540a1ee941-00072db3"
+    },
+    "Wall-2647b42e-611f-407a-a957-585c0eb63599-00072266": {
+        "wall_type": "CONCEPT 300mm RED",
+        "level_name": "Ground",
+        "revit_id": "2647b42e-611f-407a-a957-585c0eb63599-00072266",
+        "thickness": 0.9842,
+        "material": "ACU-101"
+    },
+    "Column-fedcf906-a98c-4c8e-acef-18540a1ee941-00072ded": {
+        "level_name": "Ground",
+        "section": "305x305x97UC",
+        "material": null,
+        "revit_id": "fedcf906-a98c-4c8e-acef-18540a1ee941-00072ded"
+    },
+    "Floor-fedcf906-a98c-4c8e-acef-18540a1ee941-00072e79": {
+        "floor_type": "Concrete 200 mm",
+        "level_name": "Ground",
+        "revit_id": "fedcf906-a98c-4c8e-acef-18540a1ee941-00072e79",
+        "thickness": 0.2,
+        "material": null
+    },
+    "Column-fedcf906-a98c-4c8e-acef-18540a1ee941-00072e2e": {
+        "level_name": "Ground",
+        "section": "305x305x97UC",
+        "material": null,
+        "revit_id": "fedcf906-a98c-4c8e-acef-18540a1ee941-00072e2e"
+    },
+    "Room-2647b42e-611f-407a-a957-585c0eb63599-0007270f": {
+        "number": "A4001",
+        "occupancy": "20",
+        "name": "Conference Room",
+        "floor_finish": "PT-01",
+        "wall_finish": "STL-01",
+        "height": 4,
+        "level_name": "Ground",
+        "ceiling_finish": "PT-01",
+        "base_finish": "CPT-01",
+        "revit_id": "2647b42e-611f-407a-a957-585c0eb63599-0007270f",
+        "area": 65.002
+    },
+    "Room-2647b42e-611f-407a-a957-585c0eb63599-00072712": {
+        "number": "A4002",
+        "occupancy": "2",
+        "name": "Office 1",
+        "floor_finish": "PT-01",
+        "wall_finish": "STL-01",
+        "height": 4,
+        "level_name": "Ground",
+        "ceiling_finish": "PT-01",
+        "base_finish": "CPT-01",
+        "revit_id": "2647b42e-611f-407a-a957-585c0eb63599-00072712",
+        "area": 37.45
+    },
+    "Floor-d2390d2c-7f71-414d-b143-e7f7d8048330-00072fa7": {
+        "floor_type": "Concrete 200 mm",
+        "level_name": "Level 1",
+        "revit_id": "d2390d2c-7f71-414d-b143-e7f7d8048330-00072fa7",
+        "thickness": 0.2,
+        "material": null
+    },
+    "Wall-2647b42e-611f-407a-a957-585c0eb63599-00072a14": {
+        "wall_type": "CONCEPT 200mm",
+        "level_name": "Ground",
+        "revit_id": "2647b42e-611f-407a-a957-585c0eb63599-00072a14",
+        "thickness": 0.6561,
+        "material": null
+    },
+    "Room-2647b42e-611f-407a-a957-585c0eb63599-00072a1f": {
+        "number": "A4004",
+        "occupancy": "1",
+        "name": "Storage",
+        "floor_finish": "None",
+        "wall_finish": "None",
+        "height": 4,
+        "level_name": "Ground",
+        "ceiling_finish": "None",
+        "base_finish": "None",
+        "revit_id": "2647b42e-611f-407a-a957-585c0eb63599-00072a1f",
+        "area": 9.897
+    },
+    "Room-2647b42e-611f-407a-a957-585c0eb63599-00072715": {
+        "number": "A4003",
+        "occupancy": "2",
+        "name": "Office 2",
+        "floor_finish": "PT-01",
+        "wall_finish": "STL-01",
+        "height": 4,
+        "level_name": "Ground",
+        "ceiling_finish": "PT-01",
+        "base_finish": "CPT-01",
+        "revit_id": "2647b42e-611f-407a-a957-585c0eb63599-00072715",
+        "area": 37.45
+    },
+    "Wall-2647b42e-611f-407a-a957-585c0eb63599-00072238": {
+        "wall_type": "CONCEPT 300mm RED",
+        "level_name": "Ground",
+        "revit_id": "2647b42e-611f-407a-a957-585c0eb63599-00072238",
+        "thickness": 0.9842,
+        "material": "ACU-101"
+    },
+    "Wall-2647b42e-611f-407a-a957-585c0eb63599-000722be": {
+        "wall_type": "CONCEPT 300mm RED",
+        "level_name": "Ground",
+        "revit_id": "2647b42e-611f-407a-a957-585c0eb63599-000722be",
+        "thickness": 0.9842,
+        "material": "ACU-101"
+    },
+    "Wall-2647b42e-611f-407a-a957-585c0eb63599-00072339": {
+        "wall_type": "CONCEPT 200mm",
+        "level_name": "Ground",
+        "revit_id": "2647b42e-611f-407a-a957-585c0eb63599-00072339",
+        "thickness": 0.6561,
+        "material": null
+    },
+    "Column-fedcf906-a98c-4c8e-acef-18540a1ee941-00072e55": {
+        "level_name": "Ground",
+        "section": "305x305x97UC",
+        "material": null,
+        "revit_id": "fedcf906-a98c-4c8e-acef-18540a1ee941-00072e55"
+    }
+}
