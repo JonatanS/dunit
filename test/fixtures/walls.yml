@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  revit_id: MyString
+  done: false
+  details: MyText
+  type: 
+  height: 1.5
+  thickness: 1.5
+  material: MyString
+
+two:
+  revit_id: MyString
+  done: false
+  details: MyText
+  type: 
+  height: 1.5
+  thickness: 1.5
+  material: MyString

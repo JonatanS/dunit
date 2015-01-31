@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Beams</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Revit</th>
+      <th>Done</th>
+      <th>Details</th>
+      <th>Section</th>
+      <th>Material</th>
+      <th>Angle</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @beams.each do |beam| %>
+      <tr>
+        <td><%= beam.revit_id %></td>
+        <td><%= beam.done %></td>
+        <td><%= beam.details %></td>
+        <td><%= beam.section %></td>
+        <td><%= beam.material %></td>
+        <td><%= beam.angle %></td>
+        <td><%= link_to 'Show', beam %></td>
+        <td><%= link_to 'Edit', edit_beam_path(beam) %></td>
+        <td><%= link_to 'Destroy', beam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Beam', new_beam_path %>

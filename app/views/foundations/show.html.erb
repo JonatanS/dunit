@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Revit:</strong>
+  <%= @foundation.revit_id %>
+</p>
+
+<p>
+  <strong>Done:</strong>
+  <%= @foundation.done %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @foundation.details %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @foundation.material %>
+</p>
+
+<p>
+  <strong>Foundation type:</strong>
+  <%= @foundation.foundation_type %>
+</p>
+
+<p>
+  <strong>Rotation:</strong>
+  <%= @foundation.rotation %>
+</p>
+
+<%= link_to 'Edit', edit_foundation_path(@foundation) %> |
+<%= link_to 'Back', foundations_path %>

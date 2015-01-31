@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Foundations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Revit</th>
+      <th>Done</th>
+      <th>Details</th>
+      <th>Material</th>
+      <th>Foundation type</th>
+      <th>Rotation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @foundations.each do |foundation| %>
+      <tr>
+        <td><%= foundation.revit_id %></td>
+        <td><%= foundation.done %></td>
+        <td><%= foundation.details %></td>
+        <td><%= foundation.material %></td>
+        <td><%= foundation.foundation_type %></td>
+        <td><%= foundation.rotation %></td>
+        <td><%= link_to 'Show', foundation %></td>
+        <td><%= link_to 'Edit', edit_foundation_path(foundation) %></td>
+        <td><%= link_to 'Destroy', foundation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Foundation', new_foundation_path %>

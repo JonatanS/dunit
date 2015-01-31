@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  resources :foundations
+
+  resources :floors
+
+  resources :columns
+
+  resources :braces
+
+  resources :beams
+
+  resources :walls
+
   resources :memberships
 
   resources :projects

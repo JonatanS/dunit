@@ -1,0 +1,45 @@
+<%= form_for(@floor) do |f| %>
+  <% if @floor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@floor.errors.count, "error") %> prohibited this floor from being saved:</h2>
+
+      <ul>
+      <% @floor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :revit_id %><br>
+    <%= f.text_field :revit_id %>
+  </div>
+  <div class="field">
+    <%= f.label :done %><br>
+    <%= f.check_box :done %>
+  </div>
+  <div class="field">
+    <%= f.label :details %><br>
+    <%= f.text_area :details %>
+  </div>
+  <div class="field">
+    <%= f.label :level_name %><br>
+    <%= f.text_field :level_name %>
+  </div>
+  <div class="field">
+    <%= f.label :material %><br>
+    <%= f.text_field :material %>
+  </div>
+  <div class="field">
+    <%= f.label :thickness %><br>
+    <%= f.text_field :thickness %>
+  </div>
+  <div class="field">
+    <%= f.label :floor_type %><br>
+    <%= f.text_field :floor_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Revit:</strong>
+  <%= @wall.revit_id %>
+</p>
+
+<p>
+  <strong>Done:</strong>
+  <%= @wall.done %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @wall.details %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @wall.type %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @wall.height %>
+</p>
+
+<p>
+  <strong>Thickness:</strong>
+  <%= @wall.thickness %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @wall.material %>
+</p>
+
+<%= link_to 'Edit', edit_wall_path(@wall) %> |
+<%= link_to 'Back', walls_path %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Columns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Revit</th>
+      <th>Done</th>
+      <th>Details</th>
+      <th>Section</th>
+      <th>Material</th>
+      <th>Angle</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @columns.each do |column| %>
+      <tr>
+        <td><%= column.revit_id %></td>
+        <td><%= column.done %></td>
+        <td><%= column.details %></td>
+        <td><%= column.section %></td>
+        <td><%= column.material %></td>
+        <td><%= column.angle %></td>
+        <td><%= link_to 'Show', column %></td>
+        <td><%= link_to 'Edit', edit_column_path(column) %></td>
+        <td><%= link_to 'Destroy', column, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Column', new_column_path %>

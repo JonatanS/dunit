@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  revit_id: MyString
+  done: false
+  details: MyText
+  material: MyString
+  foundation_type: MyString
+  rotation: 1.5
+
+two:
+  revit_id: MyString
+  done: false
+  details: MyText
+  material: MyString
+  foundation_type: MyString
+  rotation: 1.5

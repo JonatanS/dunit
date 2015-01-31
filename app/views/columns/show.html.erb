@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Revit:</strong>
+  <%= @column.revit_id %>
+</p>
+
+<p>
+  <strong>Done:</strong>
+  <%= @column.done %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @column.details %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @column.section %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @column.material %>
+</p>
+
+<p>
+  <strong>Angle:</strong>
+  <%= @column.angle %>
+</p>
+
+<%= link_to 'Edit', edit_column_path(@column) %> |
+<%= link_to 'Back', columns_path %>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  revit_id: MyString
+  done: false
+  details: MyText
+  level_name: MyString
+  material: MyString
+  thickness: 1.5
+  floor_type: MyString
+
+two:
+  revit_id: MyString
+  done: false
+  details: MyText
+  level_name: MyString
+  material: MyString
+  thickness: 1.5
+  floor_type: MyString

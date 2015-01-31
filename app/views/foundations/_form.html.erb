@@ -1,0 +1,41 @@
+<%= form_for(@foundation) do |f| %>
+  <% if @foundation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@foundation.errors.count, "error") %> prohibited this foundation from being saved:</h2>
+
+      <ul>
+      <% @foundation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :revit_id %><br>
+    <%= f.text_field :revit_id %>
+  </div>
+  <div class="field">
+    <%= f.label :done %><br>
+    <%= f.check_box :done %>
+  </div>
+  <div class="field">
+    <%= f.label :details %><br>
+    <%= f.text_area :details %>
+  </div>
+  <div class="field">
+    <%= f.label :material %><br>
+    <%= f.text_field :material %>
+  </div>
+  <div class="field">
+    <%= f.label :foundation_type %><br>
+    <%= f.text_field :foundation_type %>
+  </div>
+  <div class="field">
+    <%= f.label :rotation %><br>
+    <%= f.text_field :rotation %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Revit:</strong>
+  <%= @floor.revit_id %>
+</p>
+
+<p>
+  <strong>Done:</strong>
+  <%= @floor.done %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @floor.details %>
+</p>
+
+<p>
+  <strong>Level name:</strong>
+  <%= @floor.level_name %>
+</p>
+
+<p>
+  <strong>Material:</strong>
+  <%= @floor.material %>
+</p>
+
+<p>
+  <strong>Thickness:</strong>
+  <%= @floor.thickness %>
+</p>
+
+<p>
+  <strong>Floor type:</strong>
+  <%= @floor.floor_type %>
+</p>
+
+<%= link_to 'Edit', edit_floor_path(@floor) %> |
+<%= link_to 'Back', floors_path %>

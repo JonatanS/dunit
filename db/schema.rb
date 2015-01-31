@@ -11,7 +11,68 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150131153537) do
+ActiveRecord::Schema.define(version: 20150131170644) do
+
+  create_table "beams", force: :cascade do |t|
+    t.string   "revit_id"
+    t.boolean  "done"
+    t.text     "details"
+    t.string   "section"
+    t.string   "material"
+    t.float    "angle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "project_id"
+  end
+
+  create_table "braces", force: :cascade do |t|
+    t.string   "revit_id"
+    t.boolean  "done"
+    t.text     "details"
+    t.string   "section"
+    t.string   "material"
+    t.float    "angle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "project_id"
+  end
+
+  create_table "columns", force: :cascade do |t|
+    t.string   "revit_id"
+    t.boolean  "done"
+    t.text     "details"
+    t.string   "section"
+    t.string   "material"
+    t.float    "angle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "project_id"
+  end
+
+  create_table "floors", force: :cascade do |t|
+    t.string   "revit_id"
+    t.boolean  "done"
+    t.text     "details"
+    t.string   "level_name"
+    t.string   "material"
+    t.float    "thickness"
+    t.string   "floor_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "project_id"
+  end
+
+  create_table "foundations", force: :cascade do |t|
+    t.string   "revit_id"
+    t.boolean  "done"
+    t.text     "details"
+    t.string   "material"
+    t.string   "foundation_type"
+    t.float    "angle"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.integer  "project_id"
+  end
 
   create_table "memberships", force: :cascade do |t|
     t.integer  "project_id"
@@ -53,5 +114,18 @@ ActiveRecord::Schema.define(version: 20150131153537) do
   add_index "users", ["authentication_token"], name: "index_users_on_authentication_token", unique: true
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "walls", force: :cascade do |t|
+    t.string   "revit_id"
+    t.boolean  "done"
+    t.text     "details"
+    t.string   "wall_type"
+    t.float    "height"
+    t.float    "thickness"
+    t.string   "material"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "project_id"
+  end
 
 end
