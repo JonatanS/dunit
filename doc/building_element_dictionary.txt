@@ -1,0 +1,43 @@
+describe "beams" do |t|
+  t.string   "revit_id"
+  t.string   "section"
+  t.string   "material"
+  t.float    "angle"
+end
+
+describe "braces" do |t|
+  t.string   "revit_id"
+  t.string   "section"
+  t.string   "material"
+  t.float    "angle"
+end
+
+describe "columns" do |t|
+  t.string   "revit_id"
+  t.string   "section"
+  t.string   "material"
+  t.float    "angle"
+end
+
+describe "floors" do |t|
+  t.string   "revit_id"
+  t.string   "level_name"
+  t.string   "material"
+  t.float    "thickness"
+  t.string   "floor_type"
+end
+
+describe "foundations" do |t|
+  t.string   "revit_id"
+  t.string   "material"
+  t.string   "foundation_type"
+  t.float    "angle"
+end
+
+describe "walls" do |t|
+  t.string   "revit_id"
+  t.string   "wall_type"
+  t.float    "height"
+  t.float    "thickness"
+  t.string   "material"
+end
