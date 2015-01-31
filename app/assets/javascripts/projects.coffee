@@ -1,3 +1,9 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $('.project-list').on 'click', '.project-completion', ->
+    completion_data = {}
+    completion_data[$(this).data('element_class')] = done: $(this).prop('checked')
+    $.ajax $(this).data('element_endpoint'),
+      type: 'PUT'
+      data: completion_data
+    return
+  return

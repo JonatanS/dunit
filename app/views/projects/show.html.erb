@@ -17,3 +17,57 @@
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
+
+<div class="project-list">
+  <div id="rooms">
+    <header>Rooms</header>
+    <% @project.rooms.each do |room| %>
+      <%= link_to room.name, room %>
+      <%= check_box_tag :done, 1, room.done, :class => 'project-completion', :id => "room+#{room.id}_state", :'data-element_class' => 'room', :'data-element_id'=> room.id, :'data-element_endpoint' => room_path(room) %>
+    <% end %>
+  </div>
+
+  <div id="walls">
+    <header>Walls</header>
+    <% @project.walls.each do |wall| %>
+    	<%= link_to wall.name, wall %>
+      <%= check_box_tag :done, 1, wall.done, :class => 'project-completion', :id => "wall+#{wall.id}_state", :'data-element_class' => 'wall', :'data-element_id' => wall.id, :'data-element_endpoint' => wall_path(wall, :format => :js) %>
+    <% end %>
+  </div>
+
+  <div id="beams">
+    <header>Beams</header>
+    <% @project.beams.each do |beam| %>
+    	<%= link_to beam.name, beam %>
+
+    <% end %>
+  </div>
+
+  <div id="floors">
+    <header>Floors</header>
+    <% @project.floors.each do |floor| %>
+      <%= link_to floor.name, floor %>
+    <% end %>
+  </div>
+
+  <div id="columns">
+    <header>Columns</header>
+    <% @project.columns.each do |column| %>
+      <%= link_to column.name, column %>
+    <% end %>
+  </div>
+
+  <div id="braces">
+    <header>Braces</header>
+    <% @project.braces.each do |brace| %>
+      <%= link_to brace.name, brace %>
+    <% end %>
+  </div>
+
+  <div id="foundations">
+    <header>Foundations</header>
+    <% @project.foundations.each do |foundation| %>
+      <%= link_to foundation.name, foundation %>
+    <% end %>
+  </div>
+</div>

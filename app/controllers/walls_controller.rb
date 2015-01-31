@@ -44,6 +44,7 @@ class WallsController < ApplicationController
       if @wall.update(wall_params)
         format.html { redirect_to @wall, notice: 'Wall was successfully updated.' }
         format.json { render :show, status: :ok, location: @wall }
+        format.js   { render :nothing => true }
       else
         format.html { render :edit }
         format.json { render json: @wall.errors, status: :unprocessable_entity }
@@ -69,6 +70,6 @@ class WallsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def wall_params
-      params.require(:wall).permit(:revit_id, :done, :details, :type, :height, :thickness, :material)
+      params.require(:wall).permit(:revit_id, :done, :details, :wall_type, :height, :thickness, :material)
     end
 end
