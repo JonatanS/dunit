@@ -44,6 +44,7 @@ class BeamsController < ApplicationController
       if @beam.update(beam_params)
         format.html { redirect_to @beam, notice: 'Beam was successfully updated.' }
         format.json { render :show, status: :ok, location: @beam }
+        format.js   { render :nothing => true }
       else
         format.html { render :edit }
         format.json { render json: @beam.errors, status: :unprocessable_entity }

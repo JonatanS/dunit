@@ -44,6 +44,7 @@ class BracesController < ApplicationController
       if @brace.update(brace_params)
         format.html { redirect_to @brace, notice: 'Brace was successfully updated.' }
         format.json { render :show, status: :ok, location: @brace }
+        format.js   { render :nothing => true }
       else
         format.html { render :edit }
         format.json { render json: @brace.errors, status: :unprocessable_entity }

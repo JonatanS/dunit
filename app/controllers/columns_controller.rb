@@ -44,6 +44,7 @@ class ColumnsController < ApplicationController
       if @column.update(column_params)
         format.html { redirect_to @column, notice: 'Column was successfully updated.' }
         format.json { render :show, status: :ok, location: @column }
+        format.js   { render :nothing => true }
       else
         format.html { render :edit }
         format.json { render json: @column.errors, status: :unprocessable_entity }

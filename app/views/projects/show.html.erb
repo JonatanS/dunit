@@ -23,7 +23,7 @@
     <header>Rooms</header>
     <% @project.rooms.each do |room| %>
       <%= link_to room.name, room %>
-      <%= check_box_tag :done, 1, room.done, :class => 'project-completion', :id => "room+#{room.id}_state", :'data-element_class' => 'room', :'data-element_id'=> room.id, :'data-element_endpoint' => room_path(room) %>
+      <%= completion_box room %>
     <% end %>
   </div>
 
@@ -31,7 +31,7 @@
     <header>Walls</header>
     <% @project.walls.each do |wall| %>
     	<%= link_to wall.name, wall %>
-      <%= check_box_tag :done, 1, wall.done, :class => 'project-completion', :id => "wall+#{wall.id}_state", :'data-element_class' => 'wall', :'data-element_id' => wall.id, :'data-element_endpoint' => wall_path(wall, :format => :js) %>
+      <%= completion_box wall %>
     <% end %>
   </div>
 
@@ -39,7 +39,7 @@
     <header>Beams</header>
     <% @project.beams.each do |beam| %>
     	<%= link_to beam.name, beam %>
-
+      <%= completion_box beam %>
     <% end %>
   </div>
 
@@ -47,6 +47,7 @@
     <header>Floors</header>
     <% @project.floors.each do |floor| %>
       <%= link_to floor.name, floor %>
+      <%= completion_box floor %>
     <% end %>
   </div>
 
@@ -54,6 +55,7 @@
     <header>Columns</header>
     <% @project.columns.each do |column| %>
       <%= link_to column.name, column %>
+      <%= completion_box column %>
     <% end %>
   </div>
 
@@ -61,6 +63,7 @@
     <header>Braces</header>
     <% @project.braces.each do |brace| %>
       <%= link_to brace.name, brace %>
+      <%= completion_box brace %>
     <% end %>
   </div>
 
@@ -68,6 +71,7 @@
     <header>Foundations</header>
     <% @project.foundations.each do |foundation| %>
       <%= link_to foundation.name, foundation %>
+      <%= completion_box foundation %>
     <% end %>
   </div>
 </div>

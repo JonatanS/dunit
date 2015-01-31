@@ -44,6 +44,7 @@ class FoundationsController < ApplicationController
       if @foundation.update(foundation_params)
         format.html { redirect_to @foundation, notice: 'Foundation was successfully updated.' }
         format.json { render :show, status: :ok, location: @foundation }
+        format.js   { render :nothing => true }
       else
         format.html { render :edit }
         format.json { render json: @foundation.errors, status: :unprocessable_entity }

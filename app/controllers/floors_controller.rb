@@ -44,6 +44,7 @@ class FloorsController < ApplicationController
       if @floor.update(floor_params)
         format.html { redirect_to @floor, notice: 'Floor was successfully updated.' }
         format.json { render :show, status: :ok, location: @floor }
+        format.js   { render :nothing => true }
       else
         format.html { render :edit }
         format.json { render json: @floor.errors, status: :unprocessable_entity }
