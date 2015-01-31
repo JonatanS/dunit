@@ -18,7 +18,15 @@ class Project < ActiveRecord::Base
 
   	project_data.each do |element_type, element_data|
   	  begin
-    	  element = element_type.capitalize.constantize.new element_data
+        element = element_type.capitalize.constantize.find_by_revit_id element_data['revit_id']
+        if element.present?
+          element.attributes = element_data
+          if element.changed?
+            element.save
+          end
+        else
+      	  element = element_type.capitalize.constantize.new element_data
+        end
     	  element.project = self
         element.details = element_data.to_s
     	  Rails.logger.info "ingested component data: #{element.inspect}"
