@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  revit_id: MyString
+  name: MyString
+  number: MyString
+  base_finish: MyString
+  wall_finish: MyString
+  ceiling_finish: MyString
+  floor_finish: MyString
+  occupancy: 1
+  area: 1.5
+  level_name: MyString
+  height: 1.5
+
+two:
+  revit_id: MyString
+  name: MyString
+  number: MyString
+  base_finish: MyString
+  wall_finish: MyString
+  ceiling_finish: MyString
+  floor_finish: MyString
+  occupancy: 1
+  area: 1.5
+  level_name: MyString
+  height: 1.5

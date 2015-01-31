@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Revit:</strong>
+  <%= @room.revit_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @room.name %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @room.number %>
+</p>
+
+<p>
+  <strong>Base finish:</strong>
+  <%= @room.base_finish %>
+</p>
+
+<p>
+  <strong>Wall finish:</strong>
+  <%= @room.wall_finish %>
+</p>
+
+<p>
+  <strong>Ceiling finish:</strong>
+  <%= @room.ceiling_finish %>
+</p>
+
+<p>
+  <strong>Floor finish:</strong>
+  <%= @room.floor_finish %>
+</p>
+
+<p>
+  <strong>Occupancy:</strong>
+  <%= @room.occupancy %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @room.area %>
+</p>
+
+<p>
+  <strong>Level name:</strong>
+  <%= @room.level_name %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @room.height %>
+</p>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>

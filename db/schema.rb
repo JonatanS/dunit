@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150131170644) do
+ActiveRecord::Schema.define(version: 20150131182457) do
 
   create_table "beams", force: :cascade do |t|
     t.string   "revit_id"
@@ -90,6 +90,23 @@ ActiveRecord::Schema.define(version: 20150131170644) do
     t.text     "payload"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string   "revit_id"
+    t.string   "name"
+    t.string   "number"
+    t.string   "base_finish"
+    t.string   "wall_finish"
+    t.string   "ceiling_finish"
+    t.string   "floor_finish"
+    t.integer  "occupancy"
+    t.float    "area"
+    t.string   "level_name"
+    t.float    "height"
+    t.integer  "project_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "users", force: :cascade do |t|
