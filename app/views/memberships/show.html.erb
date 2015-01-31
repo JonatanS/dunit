@@ -2,12 +2,12 @@
 
 <p>
   <strong>Project:</strong>
-  <%= @membership.project %>
+  <%= link_to @membership.project.name, @membership.project %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @membership.user %>
+  <%= @membership.user.name %>
 </p>
 
 <%= link_to 'Edit', edit_membership_path(@membership) %> |

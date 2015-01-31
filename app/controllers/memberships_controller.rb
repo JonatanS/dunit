@@ -24,7 +24,16 @@ class MembershipsController < ApplicationController
   # POST /memberships
   # POST /memberships.json
   def create
-    @membership = Membership.new(membership_params)
+    if params[:email].present?
+      @user = User.new :email => params[:email]
+      @user.generate_random_password
+      @user.save
+      params[:membership][:user_id] = @user.id
+      @membership = Membership.new(membership_params)
+      Rails.logger.info "Generated password: #{@user.password}"
+    else
+      @membership = Membership.new(membership_params)
+    end
 
     respond_to do |format|
       if @membership.save

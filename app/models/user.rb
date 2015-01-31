@@ -6,10 +6,19 @@ class User < ActiveRecord::Base
 
   before_save :ensure_authentication_token
  
+  def name
+  	return email if first_name.blank?
+  	"#{first_name} #{last_name}"
+  end
+
   def ensure_authentication_token
     if authentication_token.blank?
       self.authentication_token = generate_authentication_token
     end
+  end
+
+  def generate_random_password
+  	self.password = Devise.friendly_token.first(8)
   end
  
   private
