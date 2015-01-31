@@ -14,6 +14,10 @@ class User < ActiveRecord::Base
   	"#{first_name} #{last_name}"
   end
 
+  def name_with_email
+    "#{name} <#{email}>"
+  end
+
   def ensure_authentication_token
     if authentication_token.blank?
       self.authentication_token = generate_authentication_token
