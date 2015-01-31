@@ -30,6 +30,7 @@ class MembershipsController < ApplicationController
       @user.save
       params[:membership][:user_id] = @user.id
       @membership = Membership.new(membership_params)
+      Administration.invite(@user).deliver
       Rails.logger.info "Generated password: #{@user.password}"
     else
       @membership = Membership.new(membership_params)

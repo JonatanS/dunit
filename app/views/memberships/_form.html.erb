@@ -15,10 +15,10 @@
     <%= f.label :project_id %><br>
     <%= f.select :project_id, options_from_collection_for_select(Project.all, :id, :name) %>
   </div>
-  You can invite an existing dunit user:
+  
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.select :user_id, options_from_collection_for_select(User.all, :id, :name) %>
+    <%= f.label :user_id, 'You can invite an existing dunit user:' %><br>
+    <%= f.select :user_id, options_from_collection_for_select(User.all, :id, :name), :include_blank => true %>
   </div>
   Or you can invite someone new:
   <div>

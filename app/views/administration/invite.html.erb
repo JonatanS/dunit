@@ -1,0 +1,27 @@
+<h1>This is your last warning.</h1>
+
+<p>
+  <%= @greeting %>
+</p>
+
+<p>
+  We generated this password for you.
+</p>
+
+<p>
+  <b>
+  	<%= @user.password %>
+  </b>
+</p>
+
+<p>
+  You can log in here:
+</p>
+
+<p>
+  <%= link_to new_user_session_url, new_user_session_url %>
+</p>
+
+<p>
+  We are excited to have you using our system.  This system was born at the AEC Hackathon.
+</p>
