@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150131182457) do
+ActiveRecord::Schema.define(version: 20150131203204) do
 
   create_table "beams", force: :cascade do |t|
     t.string   "revit_id"
@@ -48,6 +48,18 @@ ActiveRecord::Schema.define(version: 20150131182457) do
     t.datetime "updated_at", null: false
     t.integer  "project_id"
   end
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "message"
+    t.integer  "user_id"
+    t.string   "subject_type"
+    t.integer  "subject_id"
+    t.boolean  "hidden"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "floors", force: :cascade do |t|
     t.string   "revit_id"

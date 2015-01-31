@@ -32,6 +32,7 @@
     <% @project.walls.each do |wall| %>
     	<%= link_to wall.name, wall %>
       <%= completion_box wall %>
+      <%= comment_box wall %>
     <% end %>
   </div>
 
@@ -40,6 +41,7 @@
     <% @project.beams.each do |beam| %>
     	<%= link_to beam.name, beam %>
       <%= completion_box beam %>
+      <%= comment_box beam %>
     <% end %>
   </div>
 

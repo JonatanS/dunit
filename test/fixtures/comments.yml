@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  message: MyText
+  user_id: 
+  subject_type: MyString
+  subject_id: 1
+  hidden: false
+
+two:
+  message: MyText
+  user_id: 
+  subject_type: MyString
+  subject_id: 1
+  hidden: false
