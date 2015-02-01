@@ -21,6 +21,8 @@ Rails.application.routes.draw do
     resources :comments
   end
 
+  get '/revit_id/:revit_id' => 'projects#expose_element'
+
   root to: "projects#index"
 
   devise_for :users
