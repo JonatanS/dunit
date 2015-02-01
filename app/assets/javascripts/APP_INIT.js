@@ -94,7 +94,9 @@ $(document).ready(function(){
     //load our sample JSON file - for development of the colored meshes from GH
     //$.getJSON("./js/rvtenergy.json", function( data ){
         //https://dl.dropboxusercontent.com/s/w4xlwfkl2kdvnu2/va3c.json?dl=0
-    $.getJSON(decodeURIComponent(window.location.href.split('=')[1]), function( data ){
+        // window.location.href.split('=')[1]
+    var uri = decodeURIComponent(window.location.href.split('=')[1]);
+    $.getJSON("https://dl.dropboxusercontent.com/s/w4xlwfkl2kdvnu2/va3c.json?dl=0", function( data ){
         VA3C.jsonLoader.loadSceneFromJson(data);
     });
 

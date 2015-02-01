@@ -6,6 +6,7 @@ gem 'awesome_print'
 gem 'carrierwave'
 gem 'rails_12factor'
 gem 'attr_default'
+gem 'uri-js-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
 # Use sqlite3 as the database for Active Record

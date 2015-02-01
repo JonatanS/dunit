@@ -105,7 +105,7 @@
 <p>
   <% if @project.geometry.present? %>
     <strong>This project has a geometry file available.</strong>
-    <%= link_to 'View Geometry', viewer_path %>
+    <%= link_to 'View Geometry', viewer_path(:endpoint => project_geometry_url(@project)) %>
   <% end %>
 </p>
 
