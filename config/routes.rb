@@ -1,19 +1,33 @@
 Rails.application.routes.draw do
   resources :comments
 
-  resources :rooms
+  resources :rooms do
+    resources :comments
+  end
 
-  resources :foundations
+  resources :foundations do
+    resources :comments
+  end
 
-  resources :floors
+  resources :floors do
+    resources :comments
+  end
 
-  resources :columns
+  resources :columns do
+    resources :comments
+  end
 
-  resources :braces
+  resources :braces do
+    resources :comments
+  end
 
-  resources :beams
+  resources :beams do
+    resources :comments
+  end
 
-  resources :walls
+  resources :walls do
+    resources :comments
+  end
 
   resources :memberships
 

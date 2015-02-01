@@ -23,6 +23,7 @@
       <% @project.rooms.each do |room| %>
         <%= link_to room.name, room %>
         <%= completion_box room %>
+        <%= link_to pluralize(room.comments.not_flagged.not_resolved.count, 'comment'), room_comments_path(room) %>
         <%= comment_box room %>
       <% end %>
     </div>
@@ -34,6 +35,7 @@
       <% @project.walls.each do |wall| %>
       	<%= link_to wall.name, wall %>
         <%= completion_box wall %>
+        <%= link_to pluralize(wall.comments.not_flagged.not_resolved.count, 'comment'), wall_comments_path(wall) %>
         <%= comment_box wall %>
       <% end %>
     </div>
@@ -45,6 +47,7 @@
       <% @project.beams.each do |beam| %>
       	<%= link_to beam.name, beam %>
         <%= completion_box beam %>
+        <%= link_to pluralize(beam.comments.not_flagged.not_resolved.count, 'comment'), beam_comments_path(beam) %>
         <%= comment_box beam %>
       <% end %>
     </div>
@@ -56,6 +59,7 @@
       <% @project.floors.each do |floor| %>
         <%= link_to floor.name, floor %>
         <%= completion_box floor %>
+        <%= link_to pluralize(floor.comments.not_flagged.not_resolved.count, 'comment'), floor_comments_path(floor) %>
         <%= comment_box floor %>
       <% end %>
     </div>
@@ -67,6 +71,7 @@
       <% @project.columns.each do |column| %>
         <%= link_to column.name, column %>
         <%= completion_box column %>
+        <%= link_to pluralize(column.comments.not_flagged.not_resolved.count, 'comment'), column_comments_path(column) %>
         <%= comment_box column %>
       <% end %>
     </div>
@@ -78,6 +83,7 @@
       <% @project.braces.each do |brace| %>
         <%= link_to brace.name, brace %>
         <%= completion_box brace %>
+        <%= link_to pluralize(brace.comments.not_flagged.not_resolved.count, 'comment'), brace_comments_path(brace) %>
         <%= comment_box brace %>
       <% end %>
     </div>
@@ -89,6 +95,7 @@
       <% @project.foundations.each do |foundation| %>
         <%= link_to foundation.name, foundation %>
         <%= completion_box foundation %>
+        <%= link_to pluralize(foundation.comments.not_flagged.not_resolved.count, 'comment'), foundation_comments_path(foundation) %>
         <%= comment_box foundation %>
       <% end %>
     </div>

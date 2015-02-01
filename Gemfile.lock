@@ -37,6 +37,7 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.0)
+    attr_default (0.6.0)
     awesome_print (1.6.1)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
@@ -176,6 +177,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  attr_default
   awesome_print
   byebug
   carrierwave

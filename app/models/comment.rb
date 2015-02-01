@@ -3,7 +3,11 @@ class Comment < ActiveRecord::Base
   belongs_to :subject, :polymorphic => true
   validates :subject, :presence => true
 
-  scope :not_flagged, lambda { where(:hidden => nil) }
+  attr_default :hidden, false
+  attr_default :resolved, false
+
+  scope :not_flagged, lambda { where(:hidden => false) }
+  scope :not_resolved, lambda { where(:resolved => false) }
 
   def self.export_formatted_json comments
   	JSON.generate(comments.map do |comment|

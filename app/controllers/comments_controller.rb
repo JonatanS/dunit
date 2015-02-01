@@ -6,6 +6,20 @@ class CommentsController < ApplicationController
   def index
     @comments = if params[:project_id]
       Project.find(params[:project_id]).comments
+    elsif params[:room_id]
+      Room.find(params[:room_id]).comments
+    elsif params[:floor_id]
+      Floor.find(params[:floor_id]).comments
+    elsif params[:foundation_id]
+      Foundation.find(params[:foundation_id]).comments
+    elsif params[:wall_id]
+      Wall.find(params[:wall_id]).comments
+    elsif params[:brace_id]
+      Brace.find(params[:brace_id]).comments
+    elsif params[:beam_id]
+      Beam.find(params[:beam_id]).comments
+    elsif params[:column_id]
+      Column.find(params[:column_id]).comments
     else
       Comment.all
     end
