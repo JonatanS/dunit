@@ -5,6 +5,6 @@ class Column < ActiveRecord::Base
   include Commentary
 
   def name
-  	"{section} column"
+  	"#{section} column"
   end
 end

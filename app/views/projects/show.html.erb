@@ -19,6 +19,7 @@
       <% @project.rooms.each do |room| %>
         <%= link_to room.name, room %>
         <%= completion_box room %>
+        <%= comment_box room %>
       <% end %>
     </div>
   <% end %>
@@ -51,6 +52,7 @@
       <% @project.floors.each do |floor| %>
         <%= link_to floor.name, floor %>
         <%= completion_box floor %>
+        <%= comment_box floor %>
       <% end %>
     </div>
   <% end %>
@@ -61,6 +63,7 @@
       <% @project.columns.each do |column| %>
         <%= link_to column.name, column %>
         <%= completion_box column %>
+        <%= comment_box column %>
       <% end %>
     </div>
   <% end %>
@@ -71,6 +74,7 @@
       <% @project.braces.each do |brace| %>
         <%= link_to brace.name, brace %>
         <%= completion_box brace %>
+        <%= comment_box brace %>
       <% end %>
     </div>
   <% end %>
@@ -81,6 +85,7 @@
       <% @project.foundations.each do |foundation| %>
         <%= link_to foundation.name, foundation %>
         <%= completion_box foundation %>
+        <%= comment_box foundation %>
       <% end %>
     </div>
   <% end %>

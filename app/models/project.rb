@@ -9,6 +9,8 @@ class Project < ActiveRecord::Base
   has_many :foundations
   has_many :floors
 
+  after_save :parse_payload
+
   def comments
     [rooms, walls, beams, columns, braces, foundations, floors].map { |collection| collection.map { |elt| elt.comments.not_flagged } }.flatten
   end
@@ -17,7 +19,7 @@ class Project < ActiveRecord::Base
   	'{"wall", {"thickness": "12","height":"130.5","wall_type":"structural","material":"concrete_xyz","revit_id":"2342j33429212as"},"beam", {"section":"W14x90","material":"steel","angle":"0","revit_id":"334g3245s994885"}}'
   end
 
-  def parse_json_payload
+  def parse_payload
   	project_data = JSON.parse payload
 
   	project_data.each do |element_type, element_data|

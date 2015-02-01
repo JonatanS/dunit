@@ -17,6 +17,7 @@ describe "columns" do |t|
   t.string   "section"
   t.string   "material"
   t.float    "angle"
+  t.string   "level_name"
 end
 
 describe "floors" do |t|
@@ -40,6 +41,7 @@ describe "walls" do |t|
   t.float    "height"
   t.float    "thickness"
   t.string   "material"
+  t.string   "level_name"
 end
 
 describe "rooms" do |t|
