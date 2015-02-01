@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   protect_from_forgery except: :create
   before_action :find_auth_token, only: :create
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :show, :edit, :update, :destroy]
 
   # GET /projects
   # GET /projects.json
@@ -59,7 +59,7 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
-        @project.memberships.create :user => current_user
+        @project.memberships.create :user => current_user, :approved => true
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else
