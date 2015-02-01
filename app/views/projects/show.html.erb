@@ -12,6 +12,11 @@
 </p>
 
 <p>
+  <%= link_to pluralize(@project.memberships.authorized.count, 'member'), project_memberships_path(@project) %>
+  <%= link_to pluralize(@project.memberships.authorized.count, 'requested'), project_memberships_path(@project) %>
+</p>
+
+<p>
   <%= link_to 'Comments', project_comments_path(@project) %>
 </p>
 

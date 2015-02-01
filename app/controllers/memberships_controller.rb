@@ -4,7 +4,11 @@ class MembershipsController < ApplicationController
   # GET /memberships
   # GET /memberships.json
   def index
-    @memberships = Membership.all
+    @memberships = if params[:project_id]
+      Project.find(params[:project_id]).memberships
+    else
+      Membership.all
+    end
   end
 
   # GET /memberships/1
@@ -19,6 +23,18 @@ class MembershipsController < ApplicationController
 
   # GET /memberships/1/edit
   def edit
+  end
+
+  def request_membership
+    @project = Project.find params[:project_id]
+    Membership.create :project => @project, :user => current_user
+    redirect_to root_url, :notice => 'Access has been requested.'
+  end
+
+  def approve
+    @membership = Membership.find params[:id]
+    @membership.update_attribute :approved, true
+    redirect_to project_memberships_path(@membership.project)
   end
 
   # POST /memberships

@@ -18,9 +18,15 @@
         <td><%= project.name %></td>
         <td><%= project.description %></td>
         <td><%= link_to pluralize(project.comments.length, 'comment'), project_comments_path(project) %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Invite', new_membership_path %></td>
+          <% if current_user.authorized?(project) %>
+            <td><%= link_to 'Show', project %></td>
+            <td><%= link_to 'Edit', edit_project_path(project) %></td>
+            <td><%= link_to 'Invite', new_membership_path %></td>
+          <% elsif current_user.requested?(project) %>
+            <td>Access Pending</td>
+          <% else %>
+            <td><%= link_to 'Request Access', request_membership_memberships_path(:project_id => project.id), :method => :post %></td>
+          <% end %>
       </tr>
     <% end %>
   </tbody>

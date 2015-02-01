@@ -33,10 +33,18 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  resources :memberships
+  resources :memberships do
+    collection do
+      post :request_membership
+    end
+    member do
+      put :approve
+    end
+  end
 
   resources :projects do
     resources :comments
+    resources :memberships
     get '/geometry' => 'projects#geometry', :as => :geometry
   end
   get '/viewer' => 'projects#viewer', :as => :viewer

@@ -19,6 +19,14 @@ class User < ActiveRecord::Base
     "#{name} <#{email}>"
   end
 
+  def authorized? project
+    project.memberships.find_by_user_id(id).andand.approved?
+  end
+
+  def requested? project
+    project.memberships.find_by_user_id(id).andand.approved? == false
+  end
+
   def ensure_authentication_token
     if authentication_token.blank?
       self.authentication_token = generate_authentication_token

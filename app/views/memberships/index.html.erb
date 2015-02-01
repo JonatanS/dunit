@@ -7,6 +7,7 @@
     <tr>
       <th>Project</th>
       <th>User</th>
+      <th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +15,15 @@
   <tbody>
     <% @memberships.each do |membership| %>
       <tr>
-        <td><%= membership.project %></td>
-        <td><%= membership.user %></td>
+        <td><%= membership.project.name %></td>
+        <td><%= membership.user.name %></td>
+        <td>
+          <% if membership.approved? %>
+            [active membership]
+          <% elsif current_user.authorized?(membership.project) %>
+            <%= link_to 'Approve Membership Request', approve_membership_path(membership), :method => :put %>
+          <% end %>
+        </td>
         <td><%= link_to 'Show', membership %></td>
         <td><%= link_to 'Edit', edit_membership_path(membership) %></td>
         <td><%= link_to 'Destroy', membership, method: :delete, data: { confirm: 'Are you sure?' } %></td>
