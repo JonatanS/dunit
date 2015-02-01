@@ -20,6 +20,7 @@ class Project < ActiveRecord::Base
   end
 
   def parse_payload
+    return if payload.blank?
   	project_data = JSON.parse payload
 
   	project_data.each do |element_type, element_data|
