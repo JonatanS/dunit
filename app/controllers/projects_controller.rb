@@ -1,11 +1,13 @@
 class ProjectsController < ApplicationController
+  protect_from_forgery except: :create
+  before_action :find_auth_token, only: :create
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:show, :edit, :update, :destroy]
 
   # GET /projects
   # GET /projects.json
   def index
-    @projects = current_user.projects
+    @projects = Project.all
   end
 
   # GET /projects/1
@@ -64,6 +66,14 @@ class ProjectsController < ApplicationController
   end
 
   private
+    def find_auth_token
+      return true if params[:authenticity_token].present?
+      if params[:authentication_token].present?
+        @user = User.find_by_authentication_token params[:authentication_token]
+        sign_in @user
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
