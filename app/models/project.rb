@@ -10,7 +10,7 @@ class Project < ActiveRecord::Base
   has_many :floors
 
   def comments
-    [rooms, walls, beams, columns, braces, foundations, floors].map { |collection| collection.map(&:comments) }.flatten
+    [rooms, walls, beams, columns, braces, foundations, floors].map { |collection| collection.map { |elt| elt.comments.not_flagged } }.flatten
   end
 
   def self.sample_json
