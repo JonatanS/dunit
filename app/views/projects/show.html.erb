@@ -11,6 +11,10 @@
   <%= @project.description %>
 </p>
 
+<p>
+  <%= link_to 'Comments', project_comments_path(@project) %>
+</p>
+
 
 <div class="project-list">
   <% if @project.rooms.present? %>
