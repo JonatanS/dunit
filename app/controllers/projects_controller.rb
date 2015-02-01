@@ -2,7 +2,7 @@ class ProjectsController < ApplicationController
   protect_from_forgery except: :create
   before_action :find_auth_token, only: :create
   before_action :set_project, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: :create
 
   # GET /projects
   # GET /projects.json

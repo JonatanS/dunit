@@ -889,7 +889,17 @@ VA3C.attributes.populateAttributeList = function( jsonData ){
     }
 
     //add comment and checkbox
-    VA3C.attributes.list.append('<input type="checkbox" class="dunit-check" data-element_status_endpoint="/status/revit_id/' + 'imaginary_revit_id' + '">');
+    var revit_id = jsonData['revit_id'];
+    var dunit_url = "http://dunit.herokuapp.com/status/revit_id/" + revit_id;
+    var element_is_done = URI.openUrl(dunit_url);
+    var check_text;
+    if(element_is_done) {
+        check_text = 'checked="checked"'
+    } else {
+        check_text = 'checked=""'
+    }
+
+    VA3C.attributes.list.append('<input type="checkbox" class="dunit-check" ' + check_text + '">');
 
     //change height based on # rows
     VA3C.attributes.list.height(rowCounter * 12 + 43);
