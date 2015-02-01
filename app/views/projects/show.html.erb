@@ -3,6 +3,7 @@
 <p>
   <strong>Name:</strong>
   <%= @project.name %>
+  <%= link_to 'Edit', edit_project_path(@project) %>
 </p>
 
 <p>
@@ -10,70 +11,83 @@
   <%= @project.description %>
 </p>
 
+
+<div class="project-list">
+  <% if @project.rooms.present? %>
+    <div id="rooms">
+      <header>Rooms</header>
+      <% @project.rooms.each do |room| %>
+        <%= link_to room.name, room %>
+        <%= completion_box room %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if @project.walls.present? %>
+    <div id="walls">
+      <header>Walls</header>
+      <% @project.walls.each do |wall| %>
+      	<%= link_to wall.name, wall %>
+        <%= completion_box wall %>
+        <%= comment_box wall %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if @project.beams.present? %>
+    <div id="beams">
+      <header>Beams</header>
+      <% @project.beams.each do |beam| %>
+      	<%= link_to beam.name, beam %>
+        <%= completion_box beam %>
+        <%= comment_box beam %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if @project.floors.present? %>
+    <div id="floors">
+      <header>Floors</header>
+      <% @project.floors.each do |floor| %>
+        <%= link_to floor.name, floor %>
+        <%= completion_box floor %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if @project.columns.present? %>
+    <div id="columns">
+      <header>Columns</header>
+      <% @project.columns.each do |column| %>
+        <%= link_to column.name, column %>
+        <%= completion_box column %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if @project.braces.present? %>
+    <div id="braces">
+      <header>Braces</header>
+      <% @project.braces.each do |brace| %>
+        <%= link_to brace.name, brace %>
+        <%= completion_box brace %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if @project.foundations.present? %>
+    <div id="foundations">
+      <header>Foundations</header>
+      <% @project.foundations.each do |foundation| %>
+        <%= link_to foundation.name, foundation %>
+        <%= completion_box foundation %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+
 <p>
   <strong>Payload:</strong>
   <%= @project.payload %>
 </p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
-
-<div class="project-list">
-  <div id="rooms">
-    <header>Rooms</header>
-    <% @project.rooms.each do |room| %>
-      <%= link_to room.name, room %>
-      <%= completion_box room %>
-    <% end %>
-  </div>
-
-  <div id="walls">
-    <header>Walls</header>
-    <% @project.walls.each do |wall| %>
-    	<%= link_to wall.name, wall %>
-      <%= completion_box wall %>
-      <%= comment_box wall %>
-    <% end %>
-  </div>
-
-  <div id="beams">
-    <header>Beams</header>
-    <% @project.beams.each do |beam| %>
-    	<%= link_to beam.name, beam %>
-      <%= completion_box beam %>
-      <%= comment_box beam %>
-    <% end %>
-  </div>
-
-  <div id="floors">
-    <header>Floors</header>
-    <% @project.floors.each do |floor| %>
-      <%= link_to floor.name, floor %>
-      <%= completion_box floor %>
-    <% end %>
-  </div>
-
-  <div id="columns">
-    <header>Columns</header>
-    <% @project.columns.each do |column| %>
-      <%= link_to column.name, column %>
-      <%= completion_box column %>
-    <% end %>
-  </div>
-
-  <div id="braces">
-    <header>Braces</header>
-    <% @project.braces.each do |brace| %>
-      <%= link_to brace.name, brace %>
-      <%= completion_box brace %>
-    <% end %>
-  </div>
-
-  <div id="foundations">
-    <header>Foundations</header>
-    <% @project.foundations.each do |foundation| %>
-      <%= link_to foundation.name, foundation %>
-      <%= completion_box foundation %>
-    <% end %>
-  </div>
-</div>
