@@ -9,6 +9,10 @@ class Project < ActiveRecord::Base
   has_many :foundations
   has_many :floors
 
+  def comments
+    [rooms, walls, beams, columns, braces, foundations, floors].map { |collection| collection.map(&:comments) }.flatten
+  end
+
   def self.sample_json
   	'{"wall", {"thickness": "12","height":"130.5","wall_type":"structural","material":"concrete_xyz","revit_id":"2342j33429212as"},"beam", {"section":"W14x90","material":"steel","angle":"0","revit_id":"334g3245s994885"}}'
   end

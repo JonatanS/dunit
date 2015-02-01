@@ -4,11 +4,15 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.all
+    @comments = if params[:project_id]
+      Project.find(params[:project_id]).comments
+    else
+      Comment.all
+    end
 
     respond_to do |format|
       format.html
-      format.json { render :text => Beam.first.comments_dump }
+      format.json { render :text => Comment.export_formatted_json(@comments) }
     end
   end
 
