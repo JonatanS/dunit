@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :projects do
     resources :comments
   end
+  get '/viewer' => 'projects#viewer'
 
   get '/revit_id/:revit_id' => 'projects#expose_element'
 

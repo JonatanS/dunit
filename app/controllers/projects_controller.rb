@@ -27,6 +27,10 @@ class ProjectsController < ApplicationController
     render :json => result.to_json
   end
 
+  def viewer
+    render :layout => nil
+  end
+
   # GET /projects/new
   def new
     @project = Project.new

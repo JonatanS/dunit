@@ -1,3 +1,6 @@
+how to use it:
+http://stackoverflow.com/questions/3238925/python-urllib-urllib2-post
+
 
 http://dunit.herokuapp.com/projects
 POST
