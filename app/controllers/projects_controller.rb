@@ -27,6 +27,18 @@ class ProjectsController < ApplicationController
     render :json => result.to_json
   end
 
+  def expose_status
+    @floor = Floor.find_by_revit_id params[:revit_id]
+    @wall = Wall.find_by_revit_id params[:revit_id]
+    @column = Column.find_by_revit_id params[:revit_id]
+    @brace = Brace.find_by_revit_id params[:revit_id]
+    @beam = Beam.find_by_revit_id params[:revit_id]
+    @foundation = Foundation.find_by_revit_id params[:revit_id]
+    @room = Room.find_by_revit_id params[:revit_id]
+    result = [@floor, @wall, @column, @brace, @beam, @foundation, @room].compact.first
+    render :json => result.done
+  end
+
   def viewer
     render :layout => nil
   end

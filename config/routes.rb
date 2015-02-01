@@ -38,6 +38,7 @@ Rails.application.routes.draw do
   get '/viewer' => 'projects#viewer', :as => :viewer
 
   get '/revit_id/:revit_id' => 'projects#expose_element'
+  get '/status/revit_id/:revit_id' => 'projects#expose_status'
 
   root to: "projects#index"
 

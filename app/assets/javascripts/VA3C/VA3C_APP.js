@@ -889,7 +889,7 @@ VA3C.attributes.populateAttributeList = function( jsonData ){
     }
 
     //add comment and checkbox
-    
+    VA3C.attributes.list.append('<input type="checkbox" class="dunit-check" data-element_status_endpoint="/status/revit_id/' + 'imaginary_revit_id' + '">');
 
     //change height based on # rows
     VA3C.attributes.list.height(rowCounter * 12 + 43);
