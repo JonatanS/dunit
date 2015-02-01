@@ -102,6 +102,12 @@
   <% end %>
 </div>
 
+<p>
+  <% if @project.geometry.present? %>
+    <strong>This project has a geometry file available.</strong>
+    <%= link_to 'View Geometry', viewer_path %>
+  <% end %>
+</p>
 
 <p>
   <strong>Payload:</strong>

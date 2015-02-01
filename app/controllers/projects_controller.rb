@@ -59,6 +59,11 @@ class ProjectsController < ApplicationController
 
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
+  def geometry
+    @project = Project.find params[:project_id]
+    render :text => @project.geometry
+  end
+
   def update
     respond_to do |format|
       if @project.update(project_params)
@@ -97,6 +102,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :description, :payload)
+      params.require(:project).permit(:name, :description, :payload, :geometry)
     end
 end

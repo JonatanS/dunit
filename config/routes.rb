@@ -33,8 +33,9 @@ Rails.application.routes.draw do
 
   resources :projects do
     resources :comments
+    get '/geometry' => 'projects#geometry', :as => :geometry
   end
-  get '/viewer' => 'projects#viewer'
+  get '/viewer' => 'projects#viewer', :as => :viewer
 
   get '/revit_id/:revit_id' => 'projects#expose_element'
 
