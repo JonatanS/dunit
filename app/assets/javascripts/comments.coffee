@@ -1,3 +1,10 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $('.comments_interface').on 'click', '.hide-comment', ->
+    $.ajax $(this).data('comment_endpoint'),
+      type: 'PUT'
+      data: comment: hidden: $(this).val()
+
+  $('.comments_interface').on 'click', '.resolve-comment', ->
+    $.ajax $(this).data('comment_endpoint'),
+      type: 'PUT'
+      data: comment: resolved: $(this).val()

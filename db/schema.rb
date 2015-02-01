@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150131220433) do
+ActiveRecord::Schema.define(version: 20150201000023) do
 
   create_table "beams", force: :cascade do |t|
     t.string   "revit_id"
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20150131220433) do
     t.boolean  "hidden"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.boolean  "resolved"
   end
 
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"

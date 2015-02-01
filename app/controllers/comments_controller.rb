@@ -50,6 +50,7 @@ class CommentsController < ApplicationController
       if @comment.update(comment_params)
         format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
         format.json { render :show, status: :ok, location: @comment }
+        format.js   { render :nothing => true }
       else
         format.html { render :edit }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
@@ -75,6 +76,6 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params.require(:comment).permit(:message, :user_id, :subject_type, :subject_id, :hidden)
+      params.require(:comment).permit(:message, :user_id, :subject_type, :subject_id, :hidden, :resolved)
     end
 end

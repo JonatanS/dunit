@@ -10,18 +10,20 @@
       <th>Subject type</th>
       <th>Subject</th>
       <th>Hidden</th>
+      <th>Resolved</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="comments_interface">
     <% @comments.each do |comment| %>
       <tr>
         <td><%= comment.message %></td>
-        <td><%= comment.user %></td>
+        <td><%= comment.user.name %></td>
         <td><%= comment.subject_type %></td>
-        <td><%= comment.subject_id %></td>
-        <td><%= comment.hidden %></td>
+        <td><%= link_to comment.subject.name, comment.subject %></td>
+        <td><%= check_box_tag "comment_#{comment.id}_hidden", 1, comment.hidden, :class => 'hide-comment', :'data-comment_endpoint' => comment_path(comment, :format => :js) %></td>
+        <td><%= check_box_tag "comment_#{comment.id}_resolved", 1, comment.resolved, :class => 'resolve-comment', :'data-comment_endpoint' => comment_path(comment, :format => :js) %></td>
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
