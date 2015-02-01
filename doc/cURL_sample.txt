@@ -1,0 +1,4 @@
+
+http://localhost:3000/projects
+POST
+authentication_token=siZfYyC_atE5EvRBdbqf&project%5Bname%5D=wine&project%5Bdescription%5D=wine%20cellar&project%5Bpayload%5D=%7B%22Floor%22%3A%7B%22thickness%22%3A%2210%22%7D%7D
