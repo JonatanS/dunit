@@ -10,6 +10,9 @@
 
 	  <nav>
 	  	<%= link_to 'Projects', projects_path %>
+	  	<% if current_user %>
+	  	  <%= link_to current_user.email, 'users/edit' %>
+	  	<% end %>
 	  </nav>
 
 		<%= yield %>

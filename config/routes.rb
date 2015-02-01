@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/edit'
+
+  patch 'users/update'
+
   resources :comments
 
   resources :rooms do
