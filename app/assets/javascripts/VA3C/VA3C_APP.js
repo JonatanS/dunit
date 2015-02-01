@@ -889,10 +889,13 @@ VA3C.attributes.populateAttributeList = function( jsonData ){
     }
 
     //add comment and checkbox
+    VA3C.attributes.list.append('<div id="done-status"></div>');
+
     var revit_id = jsonData['revit_id'];
     var dunit_url = "http://dunit.herokuapp.com/status/revit_id/" + revit_id;
-    var element_is_done = URI.openUrl(dunit_url);
+    var element_is_done = $('#done-status').load(dunit_url);
     var check_text;
+    console.log(element_is_done);
     if(element_is_done) {
         check_text = 'checked="checked"'
     } else {
