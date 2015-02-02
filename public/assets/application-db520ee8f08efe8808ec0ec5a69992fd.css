@@ -1,0 +1,256 @@
+.dg.main.taller-than-window .close-button {
+    border-top: 1px solid #ddd;
+}
+
+.dg.main .close-button {
+    background-color: #ccc;
+}
+
+.dg.main .close-button:hover {
+    background-color: #ddd;
+}
+
+.dg {
+    color: #555;
+    text-shadow: none !important;
+}
+
+.dg.main::-webkit-scrollbar {
+    background: #fafafa;
+}
+
+.dg.main::-webkit-scrollbar-thumb {
+    background: #bbb;
+}
+
+.dg li:not(.folder) {
+    background: #fafafa;
+    border-bottom: 1px solid #ddd;
+}
+
+.dg li.save-row .button {
+    text-shadow: none !important;
+}
+
+.dg li.title {
+    background: #e8e8e8 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;
+}
+
+.dg .cr.function:hover,.dg .cr.boolean:hover {
+    background: #fff;
+}
+
+.dg .c input[type=text] {
+    background: #e9e9e9;
+}
+
+.dg .c input[type=text]:hover {
+    background: #eee;
+}
+
+.dg .c input[type=text]:focus {
+    background: #eee;
+    color: #555;
+}
+
+.dg .c .slider {
+    background: #e9e9e9;
+}
+
+.dg .c .slider:hover {
+    background: #eee;
+}
+body{
+    margin: 0px;
+    overflow: hidden;
+    font-family: 'lucida grande', Sans-Serif;
+    font-size: 75%;
+}
+
+
+a:link {color: #787878;}
+a:visited {color:#787878;}
+a:hover {color: #a0a0a0;}
+
+
+.attributeList {
+    height: 1px;
+    width: 360px;
+    background-color: #fafafa;
+    font-size: 11px;
+    color: #555;
+    text-align: left;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+    padding: 5px 6px;
+    display: none;
+    overflow: auto;
+    opacity: 0.85;
+}
+
+
+.attributeList h5 {
+    display: inline;
+    color : lightslategray;;
+}
+
+.attributeListHeader{
+    background-color: #e8e8e8;
+    font-size: 13px;
+    padding: 5px 2px;
+}
+
+.openFile{
+    padding: 10px;
+    background-color: #ffffff;
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -150px;
+    width: 300px;
+    height: 100px;
+    z-index: 1001;
+    font-size: 100%;
+}
+
+.openFile h2 {
+    margin: 0px;
+}
+
+.openButton{
+    margin: 25px;
+    justify-content: center;
+}
+
+.urlInput{
+    width: 100%;
+}
+
+.blackout{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.66;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1000;
+}
+
+.loading{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    display: none;
+    z-index: 1002;
+    color: #ffffff;
+}
+
+.errorMessage{
+
+}
+/* line 5, /Users/jonatans/Documents/github/dunit/app/assets/stylesheets/projects.scss */
+header {
+  font-weight: bold;
+}
+/* line 1, /Users/jonatans/Documents/github/dunit/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/jonatans/Documents/github/dunit/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/jonatans/Documents/github/dunit/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/jonatans/Documents/github/dunit/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 23, /Users/jonatans/Documents/github/dunit/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /Users/jonatans/Documents/github/dunit/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, /Users/jonatans/Documents/github/dunit/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /Users/jonatans/Documents/github/dunit/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /Users/jonatans/Documents/github/dunit/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /Users/jonatans/Documents/github/dunit/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /Users/jonatans/Documents/github/dunit/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /Users/jonatans/Documents/github/dunit/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
