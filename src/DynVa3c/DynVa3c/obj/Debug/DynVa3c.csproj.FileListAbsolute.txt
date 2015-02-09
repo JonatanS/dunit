@@ -1,0 +1,6 @@
+C:\Users\eertugrul\Documents\GitHub\dunit\src\DynVa3c\DynVa3c\bin\Debug\DynVa3c.dll
+C:\Users\eertugrul\Documents\GitHub\dunit\src\DynVa3c\DynVa3c\bin\Debug\DynVa3c.pdb
+C:\Users\eertugrul\Documents\GitHub\dunit\src\DynVa3c\DynVa3c\bin\Debug\Newtonsoft.Json.dll
+C:\Users\eertugrul\Documents\GitHub\dunit\src\DynVa3c\DynVa3c\bin\Debug\Newtonsoft.Json.xml
+C:\Users\eertugrul\Documents\GitHub\dunit\src\DynVa3c\DynVa3c\obj\Debug\DynVa3c.dll
+C:\Users\eertugrul\Documents\GitHub\dunit\src\DynVa3c\DynVa3c\obj\Debug\DynVa3c.pdb
